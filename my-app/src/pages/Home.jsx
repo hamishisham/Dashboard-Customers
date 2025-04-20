@@ -67,8 +67,8 @@ const Home = () => {
   };
 
   return (
-<div className="container mx-auto px-4 py-8 bg-white text-gray-800 dark:bg-gray-900 dark:text-white sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-{/* Header Section */}
+    <div className="container mx-auto px-4 py-8 bg-white text-gray-800 dark:bg-gray-900 dark:text-white w-full">
+      {/* Header Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-0">User Management</h1>
         <Link
@@ -80,7 +80,7 @@ const Home = () => {
       </div>
 
       {/* Table Section */}
-      <div className="shadow-md rounded-lg overflow-hidden bg-white dark:bg-gray-800">
+      <div className="shadow-md rounded-lg overflow-hidden bg-white dark:bg-gray-800 w-full">
         <MainTable users={filteredUsers} onDelete={handleDelete} />
       </div>
     </div>
