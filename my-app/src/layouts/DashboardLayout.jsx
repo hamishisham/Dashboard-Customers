@@ -14,11 +14,11 @@ const DashboardLayout = ({ children }) => {
     <div className="flex min-h-screen bg-white dark:bg-dark-bg text-black dark:text-white">
       <Sidebar className="dark:bg-dark-bg" />
 
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col bg-white text-gray-800 dark:bg-gray-900">
         <Navbar />
 
         <motion.main
-          className="p-6"
+          className="p-6 bg-white text-gray-800 dark:bg-gray-900"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}

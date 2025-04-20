@@ -55,23 +55,24 @@ const Navbar = () => {
       <h1 className="text-3xl font-bold">Main Dashboard</h1>
 
       {/* Search Area */}
-      <div className="relative w-full sm:w-auto mt-4 sm:mt-0">
-        <div className="flex gap-2">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="bg-white dark:bg-gray-800 text-black dark:text-white text-sm px-4 py-2 rounded-md outline-none w-full sm:w-52"
-          />
-          <button
-            onClick={handleSearch}
-            className="bg-transparent border-2 border-green-500 text-green-500 text-sm px-4 py-2 rounded-md hover:bg-green-500 hover:text-white transition hidden sm:block"
-          >
-            Search
-          </button>
-        </div>
-      </div>
+<div className="relative w-full sm:w-auto mt-4 sm:mt-0">
+  <div className="flex gap-2">
+    <input
+      type="text"
+      placeholder="Search..."
+      value={inputValue}
+      onChange={(e) => setInputValue(e.target.value)}
+      className="bg-white dark:bg-gray-800 text-black dark:text-white text-sm px-4 py-2 rounded-md outline-none w-full sm:w-52"
+    />
+    <button
+      onClick={handleSearch}
+      className="bg-transparent border-2 border-green-500 text-green-500 text-sm px-4 py-2 rounded-md hover:bg-green-500 hover:text-white transition"
+    >
+      Search
+    </button>
+  </div>
+</div>
+
     </motion.div>
   );
 };

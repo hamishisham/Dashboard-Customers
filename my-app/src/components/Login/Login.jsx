@@ -69,14 +69,14 @@ export default function Login() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="shadow-neutral-300 shadow-2xs flex min-h-full flex-col justify-center px-6 py-12 lg:px-8"
+        className="shadow-neutral-300 shadow-2xs flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 dark:bg-gray-900"
       >
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <motion.h1
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mt-10 text-center text-4xl font-bold tracking-tight text-gray-900"
+            className="mt-10 text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
             Sign In to your account
           </motion.h1>
@@ -85,7 +85,7 @@ export default function Login() {
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" onSubmit={formik.handleSubmit}>
             <div>
-              <label htmlFor="email" className="flex text-sm/6 font-medium text-gray-900 mb-1">
+              <label htmlFor="email" className="flex text-sm font-medium text-gray-900 mb-1 dark:text-white">
                 Email address
               </label>
               <input
@@ -96,7 +96,7 @@ export default function Login() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
-                className="block w-full border-0 border-b-2 border-gray-300 bg-transparent px-0 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none sm:text-sm/6"
+                className="block w-full border-0 border-b-2 border-gray-300 bg-transparent px-0 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none sm:text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-500"
                 placeholder="Enter your email"
               />
               {formik.touched.email && formik.errors.email && (
@@ -105,7 +105,7 @@ export default function Login() {
             </div>
 
             <div>
-              <label htmlFor="password" className="flex text-sm/6 font-medium text-gray-900 mb-1">
+              <label htmlFor="password" className="flex text-sm font-medium text-gray-900 mb-1 dark:text-white">
                 Password
               </label>
               <div className="relative">
@@ -117,11 +117,11 @@ export default function Login() {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
-                  className="block w-full border-0 border-b-2 border-gray-300 bg-transparent px-0 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none sm:text-sm/6 pr-10"
+                  className="block w-full border-0 border-b-2 border-gray-300 bg-transparent px-0 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-blue-600 focus:outline-none sm:text-sm dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-500 pr-10"
                   placeholder="Enter your password"
                 />
                 <div
-                  className="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500 dark:text-gray-300"
                   onClick={() => setShowPassword((prev) => !prev)}
                 >
                   {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
@@ -136,7 +136,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
+                className={`flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 ${
                   isLoading ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
@@ -145,9 +145,9 @@ export default function Login() {
             </div>
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
+          <p className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
             Not a member?
-            <Link to="/register" className="font-semibold text-blue-600 hover:text-blue-500">
+            <Link to="/register" className="font-semibold text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300">
               {' '}
               Sign Up
             </Link>

@@ -55,11 +55,12 @@ const ViewCustomer = () => {
       <h1 className="text-4xl font-bold text-red-500 mb-4">404</h1>
       <p className="text-xl mb-6">User not found</p>
       <Link
-        to="/home"
-        className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
-      >
-        Back to Dashboard
-      </Link>
+      to="/home"
+      className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 dark:bg-blue-800 dark:hover:bg-blue-700 dark:text-white"
+    >
+      Back to Dashboard
+    </Link>
+
     </motion.div>
   );
 
@@ -80,13 +81,14 @@ const ViewCustomer = () => {
             whileHover={{ x: -5 }}
             className="mb-6"
           >
-            <Link
-              to="/home"
-              className="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <FiArrowLeft className="mr-2" />
-              Back to Dashboard
-            </Link>
+           <Link
+            to="/home"
+            className="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+          >
+            <FiArrowLeft className="mr-2" />
+            Back to Dashboard
+          </Link>
+
           </motion.div>
 
           <motion.div
